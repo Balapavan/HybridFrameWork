@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Streams UCC" >
+ 
+  <listeners>
+ <listener class-name="output.Listner" />
+ </listeners>
+  <test name="Method Test Cases" >
+    <classes>
+    <class name="config.Browser_Initiation" />
+       <class name="running_TestNG_Scripts.Sterams_UCC" />
+       <methods>
+       <include name="GSearch" />	
+        </methods>
+    </classes>
+  </test>
+</suite>
+ 
