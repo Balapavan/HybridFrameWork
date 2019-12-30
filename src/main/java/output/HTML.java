@@ -84,7 +84,9 @@ public class HTML
 		
 		FileWriter html=new FileWriter(Constants.strHtmlFile,true);
 		PrintWriter tr=new PrintWriter(html);
-		tr.println(Write_HTLM_TR(Listner.strCurrentScriptName, UDF.strLogFilePath));
+		
+		System.out.println("[]Listner.strCurrentScriptName"+Listner.strCurrentScriptName+", UDF.strLogFilePath: "+Listner.strLogFilePath);
+		tr.println(Write_HTLM_TR(Listner.strCurrentScriptName, Listner.strLogFilePath));
 		tr.close();
 	}
 	

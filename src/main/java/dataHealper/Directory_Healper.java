@@ -8,6 +8,7 @@ import java.util.Date;
 
 import com.google.common.io.Files;
 
+import output.Listner;
 import udf.UDF;
 
 public class Directory_Healper 
@@ -43,7 +44,7 @@ public class Directory_Healper
 	/** Change Log File Name if already log file name Exist ***/
 	public static String strLogFilePath()	{
 		
-		String oldFilename=UDF.strLogFilePath;
+		String oldFilename=Listner.strLogFilePath;
 		String updatedname = "";
 		if(isFileExistStatus(oldFilename)==false){
 			return oldFilename;

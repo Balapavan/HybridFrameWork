@@ -6,19 +6,18 @@
   </listeners>
   <test name="Method Test Cases(failed)">
     <classes>
+      <class name="running_TestNG_Scripts.Sterams_UCC">
+        <methods>
+          <include name="GSearch"/>
+          <include name="WriteHTML_and_SetScriptsCount"/>
+        </methods>
+      </class> <!-- running_TestNG_Scripts.Sterams_UCC -->
       <class name="config.Browser_Initiation">
         <methods>
           <include name="BeforeSuite"/>
           <include name="EndSute"/>
         </methods>
       </class> <!-- config.Browser_Initiation -->
-      <class name="running_TestNG_Scripts.Sterams_UCC">
-        <methods>
-          <include name="WriteHTML_and_SetScriptsCount"/>
-          <include name="Message_Validation"/>
-          <include name="Login"/>
-        </methods>
-      </class> <!-- running_TestNG_Scripts.Sterams_UCC -->
     </classes>
   </test> <!-- Method Test Cases(failed) -->
 </suite> <!-- Failed suite [Streams UCC] -->

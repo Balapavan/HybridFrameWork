@@ -10,8 +10,7 @@
     <class name="config.Browser_Initiation" />
        <class name="running_TestNG_Scripts.Sterams_UCC" />
        <methods>
-<!--        <include name="Login" /> -->
-<!--        <include name="Message_Validation" />	 -->
+       <include name="GSearch" />	
         </methods>
     </classes>
   </test>

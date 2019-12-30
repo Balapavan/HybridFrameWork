@@ -34,7 +34,7 @@ public class UDF extends PageObj{
 	public static int TC_Sub_PassCount;
 	public static int TC_Sub_FailCount;
 	public static int TC_SNO;
-	public static String strLogFilePath;
+//	public static String strLogFilePath;
 	
 	
 	
@@ -88,45 +88,11 @@ public class UDF extends PageObj{
 		return CompleteDiff;
 		
 	}
-	public void Login(String strusername,String strPassword) throws Exception
-	{
 	
-		this.setUserName(strusername);
-		this.setPassword(strPassword);
-		if (strusername.isEmpty()) 
-		{
-     	  //Thread.sleep(1000);
-		    Alert al=driver.switchTo().alert();
-		    String blankusername=al.getText();
-		    Assert.assertEquals(blankusername, "Please enter User Name."); 
-		    Logs.info("Accepted User name Field Alert..");
-		    al.accept();
-		}
-		else if(strPassword.isEmpty())
-		{
-			Alert al=driver.switchTo().alert();
-			String Emptypassword=al.getText();
-			Assert.assertEquals(Emptypassword, "Please enter Password."); 
-			al.accept();
-		}
-		else if(strusername.contains("gmail.com"))
-        {
-		 
-          new WebDriverWait(driver, 5).until(ExpectedConditions.visibilityOf(invalidusername_or_password));
-//          String incorrectcrediantials=invalidusername_or_password.getText();
-         }
-		else
-		{ 
-			this.recentssearchbarwait();
-			this.contacts_status(strusername);
-		}
-		
+	
+	public static void GoogleSendKeys(String strSearchText) {
+		GoogleSeacrh(strSearchText);
 	}
-	
-	
-	
-	
-	
 	
 	
 	

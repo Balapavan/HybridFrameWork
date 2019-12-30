@@ -32,6 +32,7 @@ public class Listner implements ITestListener{
 	public static WebDriver driver;
 	public static String strCurrentScriptName;
 	public static boolean isSuteSuccess=true;
+	public static String strLogFilePath;
 
 	
 	@Override
@@ -58,12 +59,12 @@ public class Listner implements ITestListener{
 		UDF.TC_Sub_FailCount=0;
 		UDF.TC_SNO=UDF.TC_SNO+1;
 		isSuteSuccess=true;
-		UDF.strLogFilePath=Constants.strLogsFilePath+"\\"+strCurrentScriptName+"_"+System.currentTimeMillis()+".html";
+		strLogFilePath=Constants.strLogsFilePath+"\\"+strCurrentScriptName+"_"+System.currentTimeMillis()+".html";
 		String strUpdatedlogfile=Directory_Healper.strLogFilePath();
-		UDF.strLogFilePath=strUpdatedlogfile;
-		System.out.println("strLogsPath===>"+UDF.strLogFilePath);
+		strLogFilePath=strUpdatedlogfile;
+		System.out.println("strLogsPath===>"+strLogFilePath);
 		try {
-			Logs.TestSctriptStart(UDF.strLogFilePath);
+			Logs.TestSctriptStart(strLogFilePath);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

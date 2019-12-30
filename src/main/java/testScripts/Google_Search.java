@@ -10,17 +10,17 @@ import output.Logs;
 import running_TestNG_Scripts.Sterams_UCC;
 import udf.UDF;
 
-public class Login extends UDF
+public class Google_Search extends UDF
 {
 
-	public Login(WebDriver driver) {
+	public Google_Search(WebDriver driver) {
 		super(driver);
 	}
 
 	public static String strTestSheetPath=Browser_Initiation.strTestDataSheetPath;
 	public static String strSheetName=Constants.strTestDataSheetName;
 	
-	public void Login_TestCase() throws Exception{
+	public void GoogleSearch() throws Exception{
 		
 			Reader_Writer.SetInputFIlePath(strTestSheetPath, strSheetName);
 			int lastRowCount=Reader_Writer.Sheet.getLastRowNum();
@@ -31,12 +31,10 @@ public class Login extends UDF
 				
 				String strTestCasename=Reader_Writer.getTestCasename(Constants.strCaseSheetName, "TC_"+i);
 				System.out.println("strTestCasename=="+strTestCasename);
-				String strUsername=Reader_Writer.GetCellData(strTestSheetPath, strSheetName, 0, i);
-				String strPassword=Reader_Writer.GetCellData(strTestSheetPath, strSheetName, 1, i);
+				String data1=Reader_Writer.GetCellData(strTestSheetPath, strSheetName, 0, i);
 				try {
 					Logs.start_test_case(strTestCasename);
-					Logs.info("strUsername=="+strUsername+" strPassword==>"+strPassword);
-					this.Login(strUsername, strPassword);		
+					GoogleSendKeys(data1);
 					End_Start_Test.EndTestCase(strTestCasename, Constants.TC_Pass, Reader_Writer.TestDec_RowNumber);		
 					} catch (Exception e) {
 					End_Start_Test.EndTestCase(strTestCasename, Constants.TC_Fail,Reader_Writer.TestDec_RowNumber);

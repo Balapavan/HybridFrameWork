@@ -2,8 +2,6 @@ package running_TestNG_Scripts;
 
 import org.testng.annotations.Test;
 
-import com.beust.jcommander.Parameter;
-
 import config.Browser_Initiation;
 import dataHealper.Constants;
 import output.End_Start_Test;
@@ -11,8 +9,7 @@ import output.HTML;
 import output.Listner;
 import output.Retry;
 import output.RetryListner;
-import testScripts.Login;
-import testScripts.UCC_Message;
+import testScripts.Google_Search;
 import udf.UDF;
 
 import org.testng.annotations.BeforeMethod;
@@ -41,19 +38,11 @@ public class Sterams_UCC extends Browser_Initiation
 {		
 	
   @Test(priority=1, retryAnalyzer=Retry.class)
-  public void Login() throws Exception 
-  {
-	  Login l=new Login(driver); 
-	  l.Login_TestCase();
+  public void GSearch() throws Exception {
+	  Google_Search l=new Google_Search(driver); 
+	  l.GoogleSearch();
 	  System.out.println("----> isSuteSuccess <-----"+isSuteSuccess);
-	  Assert.assertTrue(false);
+	  Assert.assertTrue(Listner.isSuteSuccess);
   }
 	
-  @Test(priority=2, retryAnalyzer=Retry.class)
-  public void Message_Validation() throws Exception
-  {
-	  UCC_Message uc=new UCC_Message(driver);
-	  uc.MessageAt_SenderEnd();
-	  Assert.assertTrue(isSuteSuccess);
-  }
 }

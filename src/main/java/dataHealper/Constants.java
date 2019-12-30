@@ -19,7 +19,7 @@ public class Constants {
 	
 	public static final String strTestDataFilePath=strWorkFolderPath+"src\\main\\java\\dataHealper\\";
 	public static final String strSourceTestCasespath=strWorkFolderPath+"src\\main\\java\\dataHealper\\TestCases.xls";
-	public static final String strTestCasesDeestnationPath=OutputFolderPath+"\\"+UDF.CurrentMilliSeconds+".xls";
+	public static final String strTestCasesDeestnationPath=OutputFolderPath+"\\TestCases"+UDF.CurrentMilliSeconds+".xls";
 	
 	public static final String srtExtentConfixXML=strWorkFolderPath+"extend-config.xml";
 	
@@ -34,12 +34,9 @@ public class Constants {
 	public static final String strPropertyFileath=strWorkFolderPath+"Sute.properties";
 	
 	/**** Below are the Directory Paths for PreReqest ****/
-	
-	public static final String BetaURL="https://gostreams.beta-wspbx.com";
 	public static final String strTestDataSheetName="testdata";
 	public static final String strCaseSheetName="TestCases";
 	public static final String TC_Pass="pass";
 	public static final String TC_Fail="fail";
-	public static final String commonpassword = "abc@1234";
 
 }
