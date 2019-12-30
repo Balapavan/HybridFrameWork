@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<suite name="Streams UCC" >
+<suite name="Gooogle Search" >
  
   <listeners>
  <listener class-name="output.Listner" />
