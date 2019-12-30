@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Sample Test Suite]">
+  <parameter name="sutetype" value="sanity"/>
+  <parameter name="Network" value="beta"/>
+  <parameter name="browser" value="GC"/>
+  <listeners>
+    <listener class-name="output.Listner"/>
+  </listeners>
+  <test thread-count="5" name="Method Test Cases(failed)">
+    <classes>
+      <class name="running_TestNG_Scripts.Sterams_UCC">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="WriteHTML"/>
+          <include name="Login"/>
+        </methods>
+      </class> <!-- running_TestNG_Scripts.Sterams_UCC -->
+    </classes>
+  </test> <!-- Method Test Cases(failed) -->
+</suite> <!-- Failed suite [Sample Test Suite] -->
