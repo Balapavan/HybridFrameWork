@@ -10,11 +10,18 @@
   <name>com.NewFrameWork.com</name>
   <url>http://maven.apache.org</url>
 
+<<<<<<< HEAD
   
 <properties>
 		<jre.level>1.7</jre.level>
 		<jdk.level>1.7</jdk.level>
 	</properties>
+=======
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
+>>>>>>> 9ab83dd9f7fc8f4a4e60ba936e9da4984ac32f33
 
 	<build>
 		<plugins>
