@@ -104,19 +104,32 @@ public class Browser_Initiation extends Listner{
 			}
 	  }
 	  
-	  
-	  public static void SetBrowser(String strBrowser) throws MalformedURLException
-	  {
-		  System.out.println("strBrowser: : "+strBrowser);
-		  if (strBrowser.equalsIgnoreCase("gc"))   {
-			  
-			  	String strSystemName=System.getProperty("user.name");
+	  public static void setChromeBrowserProfile(){
+		  
+		  try {
+			  String strSystemName=System.getProperty("user.name");
 			  	System.setProperty(Constants.ChromeDriverServer, Constants.ChromeDriverPath);
 				ChromeOptions options=new ChromeOptions();
 				options.addArguments("user-data-dir=C:\\Users\\"+strSystemName+"\\AppData\\Roaming\\Google\\Chrome\\User Data\\person 6");
 				options.addArguments("--disable-popup-blocking");
 				options.addArguments("start-maximized");
 				driver=new ChromeDriver(options); 
+		} catch (Exception e) {
+			Logs.error("[setBrowserProfile] Failed to Set Custome profile Due to : : "+e);
+			Logs.info("[setBrowserProfile] initiating Deafult Profile.");
+			driver=new ChromeDriver();
+			driver.manage().deleteAllCookies();
+			driver.manage().window().maximize();
+			Logs.info("[setBrowserProfile] Default profile launch done Succ..");
+		}
+	  }
+	  
+	  public static void SetBrowser(String strBrowser) throws MalformedURLException
+	  {
+		  System.out.println("strBrowser: : "+strBrowser);
+		  if (strBrowser.equalsIgnoreCase("gc"))   {
+			  
+			  	setChromeBrowserProfile();
  		  }
 		  else if(strBrowser.equalsIgnoreCase("ff")){
 		
