@@ -44,5 +44,10 @@ public class Sterams_UCC extends Browser_Initiation
 	  System.out.println("----> isSuteSuccess <-----"+isSuteSuccess);
 	  Assert.assertTrue(Listner.isSuteSuccess);
   }
+  
+  @Test(priority=2)
+  public static void seoncdndtest() {
+	  System.out.println("**************************22222222222222222222222222");
+  }
 	
 }
