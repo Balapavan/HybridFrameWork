@@ -114,13 +114,13 @@ public class Browser_Initiation extends Listner{
 				options.addArguments("--disable-popup-blocking");
 				options.addArguments("start-maximized");
 				driver=new ChromeDriver(options); 
-		} catch (Exception e) {
-			Logs.error("[setBrowserProfile] Failed to Set Custome profile Due to : : "+e);
-			Logs.info("[setBrowserProfile] initiating Deafult Profile.");
-			driver=new ChromeDriver();
-			driver.manage().deleteAllCookies();
-			driver.manage().window().maximize();
-			Logs.info("[setBrowserProfile] Default profile launch done Succ..");
+		  	} catch (Exception e) {
+		  		Logs.error("[setBrowserProfile] Failed to Set Custome profile Due to : : "+e);
+		  		Logs.info("[setBrowserProfile] initiating Deafult Profile.");
+		  		driver=new ChromeDriver();
+		  		driver.manage().deleteAllCookies();
+		  		driver.manage().window().maximize();
+		  		Logs.info("[setBrowserProfile] Default profile launch done Succ..");
 		}
 	  }
 	  
